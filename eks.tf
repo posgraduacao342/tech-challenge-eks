@@ -29,7 +29,7 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    tech-challenge-cluster-ng = {
+    tech-challenge-ng = {
       min_size     = 1
       max_size     = 2
       desired_size = 1
