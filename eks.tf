@@ -19,11 +19,11 @@ module "eks" {
 
   vpc_id     = var.vpc_id
   subnet_ids = data.aws_subnets.this.ids
-  #   control_plane_subnet_ids = module.vpc.intra_subnets
+  //control_plane_subnet_ids = module.vpc.intra_subnets
 
   eks_managed_node_group_defaults = {
     ami_type       = "AL2_x86_64"
-    instance_types = ["t3.large"]
+    instance_types = ["t3.medium"]
 
     attach_cluster_primary_security_group = true
   }
@@ -34,7 +34,7 @@ module "eks" {
       max_size     = 8
       desired_size = 1
 
-      instance_types = ["t3.large"]
+      instance_types = ["t3.medium"]
       capacity_type  = "SPOT"
     }
   }
