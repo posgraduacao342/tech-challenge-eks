@@ -17,7 +17,7 @@ module "eks" {
     }
   }
 
-  vpc_id     = var.vpc_id
+  vpc_id = var.vpc_id
   //subnet_ids = data.aws_subnets.this.ids
 
   eks_managed_node_group_defaults = {
