@@ -16,7 +16,7 @@ module "eks" {
       most_recent = true
     }
   }
-.
+
   vpc_id     = var.vpc_id
   //subnet_ids = data.aws_subnets.this.ids
 
